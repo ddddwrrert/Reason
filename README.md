@@ -1,22 +1,22 @@
 # Reason
 
-**Claim-guided evolutionary search:** \(R^+\) reinforce / \(R^-\) protect / locus / tip_hash, with **Exploit / Explore** and anti-starvation 鈥?a full five-slot arm (not a mutate tip-in).
+**Claim-guided evolutionary search:** \(R^+\) reinforce / \(R^-\) protect / locus / tip_hash, with **Exploit / Explore** and anti-starvation — a full five-slot arm (not a mutate tip-in).
 
 Standalone clone-and-run (no DSH required). Optional Cordis companion via `DSH_EVOLVE_REASON=1`.
 
-**鍚屾簮娓呭崟锛?* [`ORIGIN.md`](ORIGIN.md) 路 **DIFF锛?* [`docs/UPSTREAM.md`](docs/UPSTREAM.md)
+**同源清单：** [`ORIGIN.md`](ORIGIN.md) · **DIFF：** [`docs/UPSTREAM.md`](docs/UPSTREAM.md)
 
 ## Loop
 
 ```text
 chooseArm (exploit|explore + anti-starve)
-  鈫?pick locus
-  鈫?select(parent)
-  鈫?mutate(parent, R+/R-/locus)
-  鈫?evaluate                    # sealed official V (mock offline)
-  鈫?append population
-  鈫?attribute 鈫?run/claim/*     # uncertain 鈮?down
-  鈫?survive
+  → pick locus
+  → select(parent)
+  → mutate(parent, R+/R-/locus)
+  → evaluate                    # sealed official V (mock offline)
+  → append population
+  → attribute → run/claim/*     # uncertain ≠ down
+  → survive
 ```
 
 | Slot | Provider | Role |
@@ -50,7 +50,7 @@ Requires an `evolve` service from `dsh-evolve-loop`. Disable the flag to restore
 
 ## Honest boundary
 
-Runnable Claim **control flow** 鈮?proven AHC tip lift. Same \(B\), official \(V\) contest runs are still required before claiming score wins.
+Runnable Claim **control flow** ≠ proven AHC tip lift. Same \(B\), official \(V\) contest runs are still required before claiming score wins.
 
 ## Layout
 

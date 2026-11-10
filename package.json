@@ -1,0 +1,67 @@
+{
+  "name": "dsh-evolve-reason",
+  "version": "0.1.0",
+  "description": "Reason: claim-guided evolutionary search (R+/R-/locus/tip, Exploit/Explore). Standalone Organon-style five-slot arm; vendored baseline + claim loop.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./src/index.js",
+  "bin": {
+    "reason-run": "./bin/reason-run.js"
+  },
+  "exports": {
+    ".": "./src/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "bin",
+    "tasks",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "ORIGIN.md",
+    "docs"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": [
+        "./cordis.patch.yml"
+      ]
+    }
+  },
+  "scripts": {
+    "start": "node bin/reason-run.js --clean",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "example:mock": "node examples/mock-evolve-run.js"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "~4.0.4",
+    "@deepseek-ai/dsh-tools": ">=0.1.7-rc.1 <0.2.0",
+    "dsh-evolve-loop": ">=0.1.0"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/cordis": { "optional": true },
+    "@deepseek-ai/dsh-tools": { "optional": true },
+    "dsh-evolve-loop": { "optional": true }
+  },
+  "devDependencies": {
+    "vitest": "^3.2.4"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ddddwrrert/Reason.git"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "evolve",
+    "reason",
+    "claim",
+    "attribution",
+    "organon"
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "name": "reason-demo",
+  "evaluator": "mock-score-hint",
+  "objective": "maximize",
+  "notes": "Standalone mock V reads score_hint from solution.cpp"
+}
